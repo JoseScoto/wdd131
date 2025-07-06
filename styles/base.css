@@ -1,0 +1,220 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c5f7a, #4a8fb0);
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c5f7a;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Grid Layout for Cards */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Card Styles */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h2 {
+    color: #2c5f7a;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    background: linear-gradient(135deg, #2c5f7a, #4a8fb0);
+    color: white;
+    padding: 1rem;
+    margin: -2rem -2rem 1rem -2rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.profile-image {
+    width: 150px;
+    height: 180px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Location and Flag Styles */
+.location {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.flag-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.flag {
+    width: 80px;
+    height: 50px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.flag-caption {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Resources List Styles */
+.resources-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resources-list li {
+    margin-bottom: 0.8rem;
+}
+
+.resources-list a {
+    color: #2c5f7a;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.resources-list a:hover {
+    color: #4a8fb0;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    background: #2c5f7a;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+.last-modified {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        gap: 1rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    #course-title {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
