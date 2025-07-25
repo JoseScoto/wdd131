@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page</title>
+    <meta name="description" content="Explore the beauty of El Salvador">
+    <meta name="author" content="Jose Escoto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+</head>
+<body>
+    <header>
+        <h1>El Salvador</h1>
+    </header>
+
+    <main>
+        <!-- Container -->
+        <section class="content-container">
+            <div class="hero">
+                <picture>
+                    <source media="(min-width: 1000px)" srcset="images/elSalvadorLarge.webp 1500w">
+                    <source media="(min-width: 500px)" srcset="images/elSalvadorMedium.webp 1000w">
+                    <img src="images/elSalvadorSmall.webp" alt="El Salvador Landscape" width="500" height="250">
+                </picture>
+            </div>
+
+            <!-- Country Information Section -->
+            <section class="country-info">
+                <h2>Country Information</h2>
+                <div class="grid-method">
+                    <div class="grid-label">Area:</div>
+                    <div class="grid-value">21,041 Km</div>
+                    <div class="grid-label">Capital:</div>
+                    <div class="grid-value">San Salvador</div>
+                    <div class="grid-label">Languages:</div>
+                    <div class="grid-value">Spanish</div>
+                    <div class="grid-label">Currency:</div>
+                    <div class="grid-value">Dollar, Bitcoin</div>
+                    <div class="grid-label">Time Zone:</div>
+                    <div class="grid-value">GMT-6</div>
+                    <div class="grid-label">Calling Code:</div>
+                    <div class="grid-value">+503</div>
+                </div>
+            </section>
+
+        <!-- weather Information Section -->
+            <section class="weather-info">
+                <h2>Weather</h2>
+               
+                    <div class="grid-method">
+                    <div class="grid-label">Temperature:</div>
+                    <div class="grid-value">30˚ C</div>
+                    <div class="grid-label">Conditions:</div>
+                    <div class="grid-value">Partly Cloudy</div>
+                    <div class="grid-label">Wind:</div>
+                    <div class="grid-value">5 km/h</div>
+                    <div class="grid-label">Wind Chill:</div>
+                    <div class="grid-value" id="windChill">25˚ C</div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jose Escoto. All rights reserved.</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/place.js"></script>
+</body>
+</html>

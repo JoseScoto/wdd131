@@ -1,0 +1,55 @@
+body {
+    font-family: Roboto, helvetica, sans-serif;
+}
+
+header,
+main,
+footer {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+
+h1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+h2 {
+    color: navy;
+    text-align: center;
+    grid-column: 1 / -1;
+}
+
+article p {
+    text-align: justify;
+    padding: 3;
+}
+
+.callout {
+    color: #070000;
+    background-color: rgb(230 243 254 / 1);
+    padding: 1rem;
+    grid-column: 1 / -1;
+}
+
+footer {
+    margin-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: smaller;
+    text-align: left;
+}
+
+/* Class Selectors */
+.banner {
+    border: 1px solid rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    background-color: rgb(230 243 254 / 1);
+    font-weight: 700;
+    word-break: break-word;
+    text-align: center;
+}
