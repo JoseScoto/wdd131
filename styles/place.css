@@ -83,7 +83,7 @@ header {
 }
 
 .weather-info h2::after {
-    content: url('/images/celsius-icon.svg');
+    content: url('../images/celsius-icon.svg');
     display: block;
     text-align: center;
     margin: 1rem auto;
