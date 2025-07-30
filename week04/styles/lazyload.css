@@ -1,0 +1,64 @@
+/* Global Variables */
+:root {
+    --primary-blue: #0047ab;
+    --light-blue: #4a90e2;
+    --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --dark-gray: #333333;
+    --border-color: #e0e0e0;
+}
+
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+/* Header */
+header {
+    background-color: var(--light-blue);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+}
+
+.random-grid {
+    border-radius: 6px;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 1rem auto;
+    width: 450px;
+    text-align: center;
+}
+
+figure {
+    margin: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.random-image {
+    object-fit: cover;
+    width: 100%;
+    opacity: 0;
+    animation-duration: 5s;
+    animation-name: FadeIn;
+    animation-fill-mode: forwards;
+}
+/* Keyframes for fade-in effect */
+@keyframes FadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

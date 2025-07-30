@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Lazy Load</title>
+    <meta name="description" content="XXX">
+    <meta name="author" content="Jose Escoto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/lazyload.css">
+</head>
+<body>
+    <header>
+        <h2>WDD 131 - Lazy Load Example</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Lazy Loading Test</h1>
+        <div class="random-grid">
+            <figure>
+                <img src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+            <figure>
+                <img loading="lazy" src="//picsum.photos/400/700/" alt="Random image from web" class="random-image">
+                <figcaption>Random image from web. Placeholder magic.</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Jose Escoto. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/lazyload.js"></script>
+</body>
+</html>
