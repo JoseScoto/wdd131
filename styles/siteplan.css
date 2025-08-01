@@ -1,0 +1,32 @@
+:root {
+    --electric-blue: #0A84FF;
+    --charcoal-black: #1C1C1E;
+    --light-gray: #E5E5EA;
+    --pure-white: #FFFFFF;
+    --neon-green: #30FFB3;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: var(--charcoal-black);
+    color: var(--light-gray);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-green);
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--electric-blue);
+}
+
+a {
+    list-style-type: none;
+    padding: 0;
+    color: var(--neon-green);
+}
