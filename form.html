@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Product Review Form</title>
+    <meta name="description" content="Building a Product Review Form">
+    <meta name="author" content="Jose Escoto">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html" class="review-form">
+            <fieldset>
+                <label>Product Name
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Select a product</option>
+                    </select>
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <label><input type="radio" id="onestar" name="stars" value="1" required> ☆ </label>
+                <label><input type="radio" id="twostars" name="stars" value="2" required> ☆☆ </label>
+                <label><input type="radio" id="threestars" name="stars" value="3" required> ☆☆☆ </label>
+                <label><input type="radio" id="fourstars" name="stars" value="4" required> ☆☆☆☆ </label>
+                <label><input type="radio" id="fivestars" name="stars" value="5" required> ☆☆☆☆☆ </label>
+            </fieldset>
+
+            <fieldset>
+                <label for="installDate">Date of Installation</label> 
+                <input type="date" id="installDate" name="installDate" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>What features did you find useful in the product?</legend>
+                <label><input type="checkbox" id="durability" name="durability" value="yes"> Durability</label>
+                <label><input type="checkbox" id="easiness" name="easiness" value="yes"> Ease of Use</label>
+                <label><input type="checkbox" id="performance" name="performance" value="yes"> Performance</label>
+                <label><input type="checkbox" id="design" name="design" value="yes"> Design</label>
+            </fieldset>
+
+            <fieldset>
+                <label for="comments">Written Review <span class="optional">(Optional)</span></label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+
+                <label for="username">Your Name <span class="optional">(Optional) </span></label>
+                <input type="text" id="username" name="username">
+            </fieldset>
+
+            <input type="submit" value="Post My Review">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Jose Escoto. All rights reserved.</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+    <script src="scripts/form.js"></script>
+    </body>
+    
+</html>
