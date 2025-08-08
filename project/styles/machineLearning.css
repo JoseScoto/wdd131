@@ -309,7 +309,7 @@ input[type="submit"]:hover,
 
 .tag {
     background-color: rgba(10, 132, 255, 0.2);
-    color: var(--electric-blue);
+    color: var(--pure-white);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.85rem;
