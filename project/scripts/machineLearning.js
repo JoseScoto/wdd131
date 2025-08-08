@@ -101,6 +101,8 @@ if (studyEntryForm) {
             tags: tags
         };
 
+        // Debug log
+        console.log('Form submitted, entry:', entry);
         // Save and update
         saveEntry(entry);
         displayEntries(studyEntries);
