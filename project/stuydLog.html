@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Forest Club</title>
+    <meta name="description"
+        content="Save your ML entries in your study log and review them when needed.">
+    <meta name="author" content="Jose Escoto">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Sora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/project/styles/machineLearning.css">
+</head>
+
+<body>
+    <header>
+        <h1>Random Forest Club</h1>
+
+        <button class="hamburguer" aria-label="Toggle menu">
+            ☰
+        </button>
+        <nav class="nav-menu">
+            <ul class="menu-items">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="studyLog.html" class="active">Study Log</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Form Section-->
+        <section class="entry-form-section">
+            <h2>📚Track Your Learning Journey</h2>
+            <form class="study-form">
+                <fieldset>
+                    <label for="logDate">Date</label>
+                    <input type="date" id="logDate" name="logDate" required>
+                </fieldset>
+
+                <fieldset>
+                    <label for="logTopics">Topic</label>
+                    <select id="topics" name="topics" required>
+                        <option value="" disabled selected>Select a topic</option>
+                        <option value="Introduction to ML"> Introduction to ML</option>
+                        <option value="Linear Regression"> Linear Regression</option>
+                        <option value="Python for Data Science"> Python for Data Science</option>
+                        <option value="Statistics Fundamentals"> Statistics Fundamentals</option>
+                        <option value="Decision Trees and Random Forest"> Decision Trees and Random Forest</option>
+                        <option value="Neural Network Basics"> Neural Network Basics</option>
+                        <option value="Supervised & Unsupervised Learning"> Supervised & Unsupervised Learning</option>
+                        <option value="Feature Engineering"> Feature Engineering</option>
+                        <option value="DeepLearning with TensorFlow"> DeepLearning with TensorFlow</option>
+                        <option value="Computer Vision"> Computer Vision</option>
+                        <option value="Natural Language Processing"> Natural Language Processing</option>
+                        <option value="Reinforcement Learning"> Reinforcement Learning</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="logComments">What did you learn? <span class="optional">(Optional)</span></label>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+                </fieldset>
+
+                <fieldset>
+                    <label for="logFeelings">How did you feel?</label>
+                    <select id="entryFeeling" name="entryFeeling" required>
+                        <option value="" disabled selected>Select a feeling</option>
+                        <option value="😊">😊 Great</option>
+                        <option value="😎">😎 Confident</option>
+                        <option value="🫥">🫥 Okay</option>
+                        <option value="😕">😕 Confused</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <div class="tags-checkbox">
+                        <legend>Tags</legend>
+                        <label><input type="checkbox" id="ml" name="entryTags" value="yes"> Machine Learning</label>
+                        <label><input type="checkbox" id="ai" name="entryTags" value="yes"> Artificial Intelligence</label>
+                        <label><input type="checkbox" id="linear" name="entryTags" value="yes"> Linear Regression</label>
+                        <label><input type="checkbox" id="statistic" name="entryTags" value="yes"> Statistics</label>
+                        <label><input type="checkbox" id="python" name="entryTags" value="yes"> Python</label>
+                        <label><input type="checkbox" id="datascience" name="entryTags" value="yes"> Data Science</label>
+                        <label><input type="checkbox" id="datanalysis" name="entryTags" value="yes"> Data Analysis</label>
+                        <label><input type="checkbox" id="decisiontree" name="entryTags" value="yes"> Decision Tree</label>
+                        <label><input type="checkbox" id="randomforest" name="entryTags" value="yes"> Random Forest</label>
+                        <label><input type="checkbox" id="neural" name="entryTags" value="yes"> Neural Networks</label>
+                        <label><input type="checkbox" id="deep" name="entryTags" value="yes"> Deep Learning</label>
+                        <label><input type="checkbox" id="dataprep" name="entryTags" value="yes"> Data Preparation</label>
+                        <label><input type="checkbox" id="tensor" name="entryTags" value="yes"> Tensor Flow</label>
+                        <label><input type="checkbox" id="other" name="entryTags" value="yes"> Other</label>
+                    </div>
+                    
+                </fieldset>
+
+                <input type="submit" value="Save Entry">
+
+            </form>
+        </section>
+
+        <!--Filter by Tag Section-->
+        <section class="filter-bar">
+            <h2>🔍 Search by keyword</h2>
+            <div class="filters">
+                <input type="text" id="searchKeyword"  placeholder="Type tag here...">
+                <select id="tagFilter">
+                    <option value="All">All Tags</option>
+                    <option value="Machine Learning"> Machine Learning</option>
+                    <option value="Artificial Intelligence"> Artificial Intelligence</option>
+                    <option value="Linear Regression"> Linear Regression</option>
+                    <option value="Statistics"> Statistics</option>
+                    <option value="Python"> Python</option>
+                    <option value="Data Science"> Data Science</option>
+                    <option value="Data Analysis"> Data Analysis</option>
+                    <option value="Decision Tree"> Decision Tree</option>
+                    <option value="Random Forest"> Random Forest</option>
+                    <option value="Neural Networks"> Neural Networks</option>
+                    <option value="Deep Learning"> Deep Learning</option>
+                    <option value="Data Preparation"> Data Preparation</option>
+                    <option value="Tensor Flow"> Tensor Flow</option>
+                    <option value="Other"> Other</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Logs Section-->
+         <section class="logs-section">
+            <h2>Your Study Logs</h2>
+            <div id="studyLogs"></div>
+         </section>
+
+    </main>
+    
+    <!--Footer Section-->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>© <span id="currentyear"></span> 🌟 Jose Escoto 🌟 El Salvador</p>
+            <p id="lastModified"></p>
+            <nav class="footer-links">
+                <a href="https://www.linkedin.com/in/joescoto-1599255b" target="_blank">LinkedIn</a>
+                <a href="mailto:jose3scoto@gmail.com">Contact</a>
+                <a href="https://github.com/" target="_blank">Github</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="scripts/machineLearning.js"></script>
+</body>
+    
+</html>
+
+

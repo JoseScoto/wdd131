@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Learning SV</title>
+    <title>Random Forest Club</title>
     <meta name="description" content="Track your Machine Learning journey, discover beginner friendly resources, and stay motivated with your personalized study log.">
     <meta name="author" content="Jose Escoto">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Sora&display=swap" rel="stylesheet">
@@ -33,7 +33,8 @@
                 <h2>Why Study Machine Learning?</h2>
                 <p>"Machine Learning isn't just the future, it's your chance to shape it. Start learning today, because every
                     breakthrough begins with the decision to take the first step."</p>
-                <button class="startNow"> Get Started</button>
+                <p>Start now and save your study logs!</p>
+                <button class="startNow">Get Started</button>
             </div>
         </section>
         
@@ -45,19 +46,19 @@
                     <article class="beginner">
                         <h3> 🟢 Beginner</h3>
                         <p>Fundamentals and basic concepts</p>
-                        <a href="resources.html">View resources</a>
+                        <a href="resources.html#beginner">View resources</a>
                     </article>
 
                     <article class="intermediate">
                         <h3> 🟡 Intermediate</h3>
                         <p>Core algorithms and techniques</p>
-                        <a href="resources.html">View resources</a>
+                        <a href="resources.html#intermediate">View resources</a>
                     </article>
 
                     <article class="advanced">
                         <h3> 🔵 Advanced</h3>
                         <p>Deep learning and advanced topics</p>
-                        <a href="resources.html">View resources</a>
+                        <a href="resources.html#advanced">View resources</a>
                     </article>  
                 </div>
         </section>
@@ -67,11 +68,12 @@
     <!--Footer Section-->
     <footer class="site-footer">
         <div class="footer-content">
-            <p>&copy; 2025 Jose Escoto. All rights reserved.</p>
+            <p>© <span id="currentyear"></span> 🌟 Jose Escoto 🌟 El Salvador</p>
+            <p id="lastModified"></p>
             <nav class="footer-links">
-                <a href="https://www.linkedin.com/in/joescoto-1599255b">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/joescoto-1599255b" target="_blank">LinkedIn</a>
                 <a href="mailto:jose3scoto@gmail.com">Contact</a>
-                <a href="https://github.com/">Github</a>
+                <a href="https://github.com/" target="_blank">Github</a>
             </nav>    
         </div>
     </footer>
